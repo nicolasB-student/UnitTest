@@ -20,6 +20,6 @@ class CalculatorTest extends TestCase
         $calculator = new Calculator();
         $result = $calculator->substract(30,15);
 
-        $this->assertEquals(15, $result);
+        $this->assertEquals(17, $result);
     }
 }
