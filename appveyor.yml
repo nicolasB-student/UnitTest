@@ -54,3 +54,7 @@ test_script:
     - cd c:\projects\symfony-demo
     - ./vendor/bin/simple-phpunit tests
     - dir c:\projects\symfony-demo\tests\AppBundle\Util
+
+after_success:
+    - export CODECOV_TOKEN="5bcd2b5a-2cf4-4152-a495-5ead1a42859b"
+    - bash <(curl -s https://codecov.io/bash)
