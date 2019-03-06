@@ -1,5 +1,3 @@
-env:
-  - CODECOV_TOKEN="47165ff1-d005-4427-8f2c-c64bd3fa5200"
 # Project language
 language: php
 
@@ -39,3 +37,7 @@ install:
 # Run script
 script:
   - phpunit tests
+  - vendor/bin/phpunit --coverage-clover=coverage.xml
+
+after_success:
+    - bash <(curl -s https://codecov.io/bash) -t 47165ff1-d005-4427-8f2c-c64bd3fa5200
