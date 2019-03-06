@@ -37,7 +37,7 @@ install:
 # Run script
 script:
   - phpunit tests/AppBundle/Util
-  - vendor/bin/phpunit --coverage-clover=coverage.xml
+  #- vendor/bin/phpunit --coverage-clover=coverage.xml
   - bash <(curl -s https://codecov.io/bash) -t 5bcd2b5a-2cf4-4152-a495-5ead1a42859b
 
 after_success:
